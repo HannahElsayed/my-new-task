@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "McDonalds",
+    "amount": 120,
+    "category": "Food"
+  },
+  {
+    "id": 2,
+    "title": "Uber",
+    "amount": 80,
+    "category": "Transport"
+  }
+]
