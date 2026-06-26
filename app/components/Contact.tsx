@@ -97,7 +97,7 @@ export default function Contact() {
                       whileHover={{ x: 6 }}
                       className="flex items-center gap-5 p-4 rounded-2xl hover:bg-white/5 transition-all"
                     >
-                      <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-pink-500/20 border border-pink-500/30">
+                      <div className="w-18 h-18n flex items-center justify-center rounded-2xl bg-pink-500/20 border border-pink-500/30">
                         <Icon className="text-pink-400" size={22} />
                       </div>
 
