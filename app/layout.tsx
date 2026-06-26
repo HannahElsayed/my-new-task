@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import "./styles/globals.css";
+import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -13,15 +13,18 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
 });
 
+
+
 export const metadata: Metadata = {
   title: "Anime Illustrator Portfolio",
   description:
     "Bold, modern portfolio of an anime illustrator showcasing character art, brand illustrations, and commissions.",
-  keywords:
-    "anime, illustration, portfolio, character art, digital art, commissions",
-  authors: [{ name: "Anime Artist" }],
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
-  robots: "index, follow",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({

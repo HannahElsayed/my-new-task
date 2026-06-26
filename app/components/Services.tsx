@@ -16,8 +16,8 @@ export default function Services() {
       description:
         'Custom character designs with detailed expressions, clothing, and personality that bring stories to life.',
       icon: Palette,
-      gradient: 'from-lime-400/20 to-lime-400/5',
-      borderColor: 'border-lime-400/50',
+      gradient: 'from-pink-500/20 to-pink-500/5',
+      borderColor: 'border-pink-500/50',
     },
     {
       id: 2,
@@ -25,8 +25,8 @@ export default function Services() {
       description:
         'Professional branding illustrations that establish visual identity and create memorable brand presence.',
       icon: Star,
-      gradient: 'from-pink-500/20 to-pink-500/5',
-      borderColor: 'border-pink-500/50',
+      gradient: 'from-purple-500/20 to-purple-500/5',
+      borderColor: 'border-purple-500/50',
     },
     {
       id: 3,
@@ -34,8 +34,35 @@ export default function Services() {
       description:
         'Personalized anime-style artwork tailored to your vision with high-quality details and vibrant colors.',
       icon: Sparkles,
-      gradient: 'from-cyan-400/20 to-cyan-400/5',
-      borderColor: 'border-cyan-400/50',
+      gradient: 'from-pink-400/20 to-pink-400/5',
+      borderColor: 'border-pink-400/50',
+    },
+    {
+      id: 4,
+      title: 'Concept Art',
+      description:
+        'Innovative concept designs for games, films, and media projects with stunning visual direction.',
+      icon: Palette,
+      gradient: 'from-purple-400/20 to-purple-400/5',
+      borderColor: 'border-purple-400/50',
+    },
+    {
+      id: 5,
+      title: 'Digital Painting',
+      description:
+        'High-resolution digital paintings with vibrant colors and professional-grade artistic techniques.',
+      icon: Star,
+      gradient: 'from-pink-500/20 to-pink-500/5',
+      borderColor: 'border-pink-500/50',
+    },
+    {
+      id: 6,
+      title: 'Character Animation',
+      description:
+        'Animated character designs ready for motion graphics and interactive media experiences.',
+      icon: Sparkles,
+      gradient: 'from-purple-500/20 to-purple-500/5',
+      borderColor: 'border-purple-500/50',
     },
   ];
 
@@ -60,22 +87,22 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="relative py-20 px-4 sm:px-6 lg:px-8">
+    <section id="services" className="relative py-28 bg-black">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-40 -z-10">
-        <div className="absolute top-20 right-1/4 w-80 h-80 bg-lime-400/5 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-1/4 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto">
-        {/* Section header */}
+      {/* Section header */}
         <ScrollReveal>
-          <div className="text-center mb-16 md:mb-20">
+          <div className="text-center mb-28 space-y-10 flex flex-col items-center justify-center">
             <motion.p
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-lime-400 font-display font-bold mb-3"
+              className="text-pink-500 font-display font-bold text-sm uppercase"
             >
               Services
             </motion.p>
@@ -84,7 +111,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl lg:text-6xl font-display font-black"
+              className="text-3xl sm:text-4xl md:text-5xl font-display font-black max-w-4xl"
             >
               What I Create
             </motion.h2>
@@ -93,7 +120,7 @@ export default function Services() {
 
         {/* Services grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -114,18 +141,18 @@ export default function Services() {
                 <motion.div
                   whileHover={{ y: -10, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                  className={`relative h-full rounded-2xl border-2 ${service.borderColor} ${service.gradient} bg-gradient-to-br backdrop-blur-sm p-8 flex flex-col transition-all duration-300`}
+                  className={`relative h-full rounded-2xl border-2 ${service.borderColor} ${service.gradient} bg-gradient-to-br backdrop-blur-sm p-10 md:p-12 flex flex-col gap-8 transition-all duration-300`}
                 >
                   {/* Icon */}
                   <motion.div
-                    className="w-14 h-14 rounded-full bg-lime-400/20 flex items-center justify-center mb-6 group-hover:glow-lime transition-all"
+                    className="w-16 h-16 rounded-full bg-pink-500/20 flex items-center justify-center group-hover:glow-lime transition-all"
                     whileHover={{ scale: 1.1, rotate: 10 }}
                   >
-                    <Icon className="w-7 h-7 text-lime-400" />
+                    <Icon className="w-7 h-7 text-pink-500" />
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-display font-bold mb-3 group-hover:text-lime-400 transition-colors">
+                  <h3 className="text-xl md:text-2xl font-display font-bold mb-3 group-hover:text-pink-400 transition-colors">
                     {service.title}
                   </h3>
 
@@ -136,7 +163,7 @@ export default function Services() {
 
                   {/* CTA arrow */}
                   <motion.div
-                    className="mt-6 flex items-center text-lime-400 font-medium text-sm"
+                    className="mt-6 flex items-center text-pink-500 font-medium text-sm"
                     whileHover={{ x: 5 }}
                   >
                     Learn more

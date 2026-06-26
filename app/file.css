@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+
+  --color-primary: #ec4899;
+  --color-secondary: #a855f7;
+}
+
+/* ===== BASE ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== LAYOUT ===== */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.section-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-inline: 1.5rem;
+}
+
+/* ===== BUTTONS (FIXED WITH TAILWIND COMPATIBLE OVERRIDE) ===== */
+button,
+input[type="submit"],
+button[type="button"],
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.25rem 0.5rem; /* clean normal padding */
+
+  min-height: 0.5rem;
+  border-radius: 10px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+
+  background: var(--color-primary);
+  color: white;
+
+  border: none;
+}
+
+/* hover */
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ===== UTILITIES ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ec4899;
+  border-radius: 10px;
+}

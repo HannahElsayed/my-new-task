@@ -3,9 +3,9 @@
 import Navbar from './components/Navbar';
 import FloatingShapes from './components/FloatingShapes';
 import Hero from './components/Hero';
-import Services from './components/Services';
-import Stats from './components/Stats';
-import StyleGrid from './components/StyleGrid';
+import AboutSection from './components/AboutSection';
+import SkillsSection from './components/SkillsSection';
+import ProjectsSection from './components/ProjectsSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -25,14 +25,14 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Services Section */}
-      <Services />
+      {/* About Section */}
+      <AboutSection />
 
-      {/* Stats Section */}
-      <Stats />
+      {/* Skills Section */}
+      <SkillsSection />
 
-      {/* Style/Bento Grid Section */}
-      <StyleGrid />
+      {/* Projects Section */}
+      <ProjectsSection />
 
       {/* Contact Section */}
       <Contact />

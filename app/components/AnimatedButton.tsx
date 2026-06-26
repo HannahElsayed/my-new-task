@@ -11,10 +11,6 @@ interface AnimatedButtonProps {
   size?: 'sm' | 'md' | 'lg';
 }
 
-/**
- * AnimatedButton Component
- * Reusable button with hover and tap animations
- */
 export default function AnimatedButton({
   text,
   onClick,
@@ -22,33 +18,35 @@ export default function AnimatedButton({
   variant = 'primary',
   size = 'md',
 }: AnimatedButtonProps) {
-  const baseClasses = 'font-display font-bold rounded-full transition-all duration-300';
 
-  const variantClasses = {
+  const base = 'rounded-2xl font-semibold transition-all duration-300';
+
+  const variants = {
     primary:
-      'bg-lime-400 text-black hover:glow-lime hover:scale-105 active:scale-95',
+      'bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-500 text-white shadow-md hover:shadow-lg',
     secondary:
-      'bg-pink-500 text-white hover:glow-pink hover:scale-105 active:scale-95',
-    ghost: 'border-2 border-lime-400 text-lime-400 hover:bg-lime-400/10 hover:scale-105 active:scale-95',
+      'bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-md hover:shadow-lg',
+    ghost:
+      'border border-white/30 text-white hover:bg-white/10 hover:border-white/50',
   };
 
-  const sizeClasses = {
-    sm: 'px-6 py-2 text-sm',
-    md: 'px-8 py-3 text-base',
+  const sizes = {
+    sm: 'px-5 py-2 text-sm',
+    md: 'px-7 py-3 text-base',
     lg: 'px-10 py-4 text-lg',
   };
 
   return (
     <motion.button
+      type="button"
       onClick={onClick}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
     >
       {text}
     </motion.button>
   );
 }
+
+
