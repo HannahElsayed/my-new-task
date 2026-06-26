@@ -25,10 +25,10 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-display font-bold text-pink-500 mb-3">
-              AI Studio
+              H A N N A H
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
-              Creating stunning anime illustrations and brand art
+              Building clean, modern, and responsive web applications.
             </p>
           </motion.div>
 
@@ -44,13 +44,15 @@ export default function Footer() {
             </h4>
 
             <ul className="space-y-3 text-gray-400 text-sm">
-              {['Home', 'Services', 'Portfolio', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="hover:text-pink-500 transition-colors"
-                  >
-                    {item}
+              {[
+                { label: 'Home', href: '#hero' },
+                { label: 'Services', href: '#skills' },
+                { label: 'Portfolio', href: '#projects' },
+                { label: 'Contact', href: '#contact' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} className="hover:text-pink-500 transition-colors">
+                    {item.label}
                   </a>
                 </li>
               ))}
@@ -95,7 +97,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm gap-6 text-center">
             
             <p>
-              © {currentYear} AI Studio. All rights reserved.
+              © {currentYear} H A N N A H. All rights reserved.
             </p>
 
             <div className="flex gap-6">

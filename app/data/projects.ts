@@ -17,7 +17,7 @@ export const projects: Project[] = [
     year: '2025',
     description:
       'A personal portfolio website showcasing my projects, skills, and frontend development experience.',
-    image: '/images/portfolio.png', 
+    image: '/images/Portfolio.png', 
     tags: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
     githubUrl: 'https://github.com/HannahElsayed/H-A-N-N-A-H-PORFTFOLIO',
     demoUrl: 'https://hannahelsayed.github.io/H-A-N-N-A-H-PORFTFOLIO/',

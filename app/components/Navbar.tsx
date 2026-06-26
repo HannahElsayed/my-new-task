@@ -84,6 +84,7 @@ export default function Navbar() {
                 duration: 0.5,
                 delay: 0.4,
               }}
+              onClick={() => handleNavClick('contact')}
               className="px-2 lg:px-6 py-3 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-500 text-white rounded-2xl font-bold shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 hover:scale-105 active:scale-95 transition-all duration-300"
             >
               Let's Talk
@@ -122,7 +123,10 @@ export default function Navbar() {
               </button>
             ))}
 
-            <button className="px-6 py-3 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-500 text-white rounded-2xl font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all w-full mt-4 uppercase tracking-wide">
+            <button
+              onClick={() => handleNavClick('contact')}
+              className="px-6 py-3 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-500 text-white rounded-2xl font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all w-full mt-4 uppercase tracking-wide"
+            >
               Let's Talk
             </button>
           </div>

@@ -15,7 +15,7 @@ import Footer from './components/Footer';
  */
 export default function Home() {
   return (
-    <main className="relative overflow-hidden bg-black">
+    <main className="relative overflow-x-hidden bg-black">
       {/* Floating decorative shapes */}
       <FloatingShapes />
 

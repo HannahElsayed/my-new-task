@@ -14,12 +14,20 @@ type ProjectCardProps = {
 };
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const detailsHref = project.detailsUrl && project.detailsUrl !== '#'
+    ? project.detailsUrl
+    : project.demoUrl && project.demoUrl !== '#'
+      ? project.demoUrl
+      : project.githubUrl;
+
+  const detailsTarget = detailsHref.startsWith('http') ? '_blank' : '_self';
+
   return (
     <motion.article
       variants={cardVariants}
       whileHover={{ y: -12, scale: 1.02 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
-      className="group flex flex-col w-full h-200 overflow-hidden rounded-2xl border border-white/15 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md shadow-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300"
+      className="group flex h-full min-h-[460px] w-full flex-col overflow-hidden rounded-2xl border border-white/15 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md shadow-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300"
     >
      <div className="relative overflow-hidden w-full h-60 ">
         <img
@@ -55,7 +63,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <div className="mt-auto flex flex-col sm:flex-row items-center justify-between gap-6 pt-2">
           <a
-            href={project.detailsUrl}
+            href={detailsHref}
+            target={detailsTarget}
+            rel={detailsTarget === '_blank' ? 'noreferrer' : undefined}
             className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-500 px-3 py-1 text-sm font-semibold text-white shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto"
           >
             View Details

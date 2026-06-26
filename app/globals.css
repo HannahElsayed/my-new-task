@@ -15,6 +15,11 @@ body {
   color: white;
   font-family: Inter, sans-serif;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
+
+section[id] {
+  scroll-margin-top: 96px;
 }
 
 /* ===== CUSTOM COLOR VARIABLES ===== */

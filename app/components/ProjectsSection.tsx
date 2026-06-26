@@ -83,7 +83,7 @@ export default function ProjectsSection() {
           ))}
         </motion.div>
 
-        <div className="relative mt-12 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-18 md:p-12 lg:p-16 shadow-2xl backdrop-blur-xl">
+        <div className="relative mt-12 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 lg:p-16 shadow-2xl backdrop-blur-xl">
           <div className="absolute -left-20 top-10 h-48 w-48 rounded-full bg-purple-500/15 blur-3xl" />
           <div className="absolute right-0 bottom-0 h-56 w-56 rounded-full bg-fuchsia-500/15 blur-3xl" />
 
