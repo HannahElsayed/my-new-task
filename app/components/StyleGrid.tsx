@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { easeOut } from 'framer-motion';
 import { Sparkles, Palette, Zap, Heart, Rocket, Star } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
