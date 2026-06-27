@@ -64,7 +64,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-col xs:flex-row gap-4 sm:gap-6 pt-4 sm:pt-6"
+                className="flex xs:flex-row gap-4 sm:gap-6 pt-4 sm:pt-6"
               >
                 <a href="#projects" className="inline-flex items-center justify-center px-4 sm:px-6 py-3 sm:py-3 rounded-lg bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-500 text-white font-semibold text-sm sm:text-base shadow-md hover:shadow-lg transform hover:scale-105 transition-all active:scale-95">View Projects</a>
                 <a href="#contact" className="inline-flex items-center justify-center px-4 sm:px-6 py-3 sm:py-3 rounded-lg bg-transparent border border-purple-600 text-white font-semibold text-sm sm:text-base hover:bg-white/5 transition-colors active:scale-95">Contact Me</a>
